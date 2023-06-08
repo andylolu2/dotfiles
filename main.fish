@@ -114,7 +114,9 @@ function link_dotfiles
     # or abort yamllint
 end
 
-curl -sL https://git.io/fisher
+curl -sL https://git.io/fisher | source
+
+fisher --help
 
 exit 0
 
