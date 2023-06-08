@@ -114,11 +114,11 @@ function link_dotfiles
     # or abort yamllint
 end
 
-curl -sL git.io/fisher | source && fisher install jorgebucaran/fisher
-and success fisher
-or abort fisher
+# curl -sL git.io/fisher | source && fisher install jorgebucaran/fisher
+# and success fisher
+# or abort fisher
 
-exit 0
+# exit 0
 
 # setup_gitconfig \
 #     and success gitconfig or abort gitconfig
