@@ -114,34 +114,20 @@ function link_dotfiles
     # or abort yamllint
 end
 
-# curl -sL https://git.io/fisher | source
-
-# echo 1
-
-# curl -sL git.io/fisher | source
-
-fisher --help
-
-# fisher install jorgebucaran/fisher
-
-echo 2
-# and success fisher
-# or abort fisher
+curl -sL git.io/fisher | source && fisher install jorgebucaran/fisher
+and success fisher
+or abort fisher
 
 # setup_gitconfig \
 #     and success gitconfig or abort gitconfig
 
 link_dotfiles
-
-echo 3
-# and success dotfiles
-# or abort dotfiles
+and success dotfiles
+or abort dotfiles
 
 fisher update
-
-echo 4
-# and success plugins
-# or abort plugins
+and success plugins
+or abort plugins
 
 yes | fish_config theme save "Catppuccin Mocha"
 and success colorscheme
