@@ -138,6 +138,8 @@ and success completions
 or abort completions
 
 $DOTFILES_ROOT/base.fish
+and success base.fish
+or abort base.fish
 
 for installer in */install.fish
     $installer
@@ -146,7 +148,7 @@ for installer in */install.fish
 end
 
 if ! grep (command -v fish) /etc/shells
-    command -v fish | sudo tee -a /etc/shells
+    command -v fish | tee -a /etc/shells
     and success 'added fish to /etc/shells'
     or abort 'setup /etc/shells'
     echo
