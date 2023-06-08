@@ -114,13 +114,15 @@ function link_dotfiles
     # or abort yamllint
 end
 
-curl -sL https://git.io/fisher | source
+# curl -sL https://git.io/fisher | source
 
-echo 1
+# echo 1
 
 # curl -sL git.io/fisher | source
 
-fisher install jorgebucaran/fisher
+fisher --help
+
+# fisher install jorgebucaran/fisher
 
 echo 2
 # and success fisher
