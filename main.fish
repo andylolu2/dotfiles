@@ -118,14 +118,14 @@ curl -sL git.io/fisher | source && fisher install jorgebucaran/fisher
 and success fisher
 or abort fisher
 
+exit 0
+
 # setup_gitconfig \
 #     and success gitconfig or abort gitconfig
 
 link_dotfiles
 and success dotfiles
 or abort dotfiles
-
-exit 0
 
 fisher update
 and success plugins
