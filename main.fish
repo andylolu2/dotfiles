@@ -116,9 +116,13 @@ end
 
 curl -sL https://git.io/fisher | source
 
-curl -sL git.io/fisher | source
+echo 1
+
+# curl -sL git.io/fisher | source
 
 fisher install jorgebucaran/fisher
+
+echo 2
 # and success fisher
 # or abort fisher
 
@@ -126,10 +130,14 @@ fisher install jorgebucaran/fisher
 #     and success gitconfig or abort gitconfig
 
 link_dotfiles
+
+echo 3
 # and success dotfiles
 # or abort dotfiles
 
 fisher update
+
+echo 4
 # and success plugins
 # or abort plugins
 
