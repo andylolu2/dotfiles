@@ -2,7 +2,7 @@
 #
 # bootstrap installs things.
 
-set DOTFILES_ROOT (pwd -P)
+set DOTFILES_ROOT $HOME/.dotfiles
 
 function info
     echo [(set_color --bold) ' .. ' (set_color normal)] $argv
