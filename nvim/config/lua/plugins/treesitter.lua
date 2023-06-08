@@ -40,8 +40,10 @@ return {
         auto_install = false,
         ensure_installed = {
           "bash",
+          "c",
           "cpp",
           "css",
+          "cuda"
           "diff",
           "dockerfile",
           "fish",
@@ -50,11 +52,6 @@ return {
           "gitcommit",
           "gitignore", -- will require tree-sittter-cli
           "go",
-          "gomod",
-          "gowork",
-          "graphql",
-          "hcl",
-          "help",
           "html",
           "http",
           "javascript",
@@ -64,15 +61,13 @@ return {
           "make",
           "markdown",
           "markdown_inline",
-          "nix",
-          "query",
+          "ocaml"
+          "python",
           "regex",
           "rust",
           "scss",
-          "sql", -- will require tree-sittter-cli
           "terraform",
           "toml",
-          "vhs",
           "vim",
           "yaml",
           "zig",
