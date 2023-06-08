@@ -125,6 +125,8 @@ link_dotfiles
 and success dotfiles
 or abort dotfiles
 
+exit 0
+
 fisher update
 and success plugins
 or abort plugins
@@ -146,8 +148,6 @@ for installer in */install.fish
     and success $installer
     or abort $installer
 end
-
-exit 0
 
 if ! grep (command -v fish) /etc/shells
     command -v fish | tee -a /etc/shells
