@@ -1,0 +1,121 @@
+# Plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-yank'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+run -b '~/.tmux/plugins/tpm/tpm'
+
+# Prefix
+set-option -g prefix C-a
+unbind-key C-a
+bind-key C-a send-prefix
+set -g base-index 1
+
+# Vi settings
+setw -g mode-keys vi
+set -g status-keys vi
+
+bind-key v split-window -h
+bind-key s split-window -v
+
+bind-key J resize-pane -D 5
+bind-key K resize-pane -U 5
+bind-key H resize-pane -L 5
+bind-key L resize-pane -R 5
+
+bind-key M-j resize-pane -D
+bind-key M-k resize-pane -U
+bind-key M-h resize-pane -L
+bind-key M-l resize-pane -R
+
+# Vim style pane selection
+bind h select-pane -L
+bind j select-pane -D 
+bind k select-pane -U
+bind l select-pane -R
+
+# Use Alt-vim keys without prefix key to switch panes
+bind -n M-h select-pane -L
+bind -n M-j select-pane -D 
+bind -n M-k select-pane -U
+bind -n M-l select-pane -R
+
+# Use Alt-arrow keys without prefix key to switch panes
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+# Shift arrow to switch windows
+bind -n S-Left  previous-window
+bind -n S-Right next-window
+
+
+# Mouse mode
+setw -g mouse on
+
+# Auto restore tmux
+set -g @continuum-restore 'on'
+
+# Start windows and panes index at 1, not 0.
+set -g base-index 1
+setw -g pane-base-index 1
+
+# Ensure window index numbers get reordered on delete.
+set-option -g renumber-windows on
+
+# set terminal title
+set-option -g set-titles on
+set-option -g set-titles-string "#S / #W"
+
+# auto rename tmux window to current cwd
+set-option -g status-interval 1
+set-option -g automatic-rename on
+set-option -g automatic-rename-format '#{b:pane_current_path}'
+
+set -g default-terminal screen-256color
+set -g history-limit 10000
+
+setw -g monitor-activity on
+
+# No delay for escape key press
+set -sg escape-time 0
+
+# Reload tmux config
+bind r source-file ~/.tmux.conf
+
+# THEME
+thm_bg="#000000"
+thm_fg="#cdd6f4"
+thm_cyan="#89dceb"
+thm_black="#181825"
+thm_gray="#45475a"
+thm_magenta="#cba6f7"
+thm_pink="#f5c2e7"
+thm_red="#f38ba8"
+thm_green="#a6e3a1"
+thm_yellow="#f9e2af"
+thm_blue="#89b4fa"
+thm_orange="#fab387"
+thm_black4="#585b70"
+
+set -g status "on"
+set -g status-bg "${thm_bg}"
+set -g status-justify "left"
+set -g status-left-length "100"
+set -g status-right-length "100"
+set -g status-left ""
+set -g status-right ""
+set -g message-style fg="${thm_fg}",bg="${thm_gray}",align="centre"
+set -g message-command-style fg="${thm_blue}",bg="${thm_gray}",align="centre"
+set -g pane-border-style fg="${thm_gray}"
+set -g pane-active-border-style fg="${thm_blue}"
+set -g window-status-activity-style fg="${thm_fg}",bg="${thm_bg}",none
+set -g window-status-separator ""
+set -g window-status-style fg="${thm_fg}",bg="${thm_bg}",none
+set -g window-status-format "#[fg=$thm_bg,bg=$thm_blue] #I #(icons #{pane_current_command}) #[fg=$thm_fg,bg=$thm_gray] #{b:pane_current_path} "
+set -g window-status-current-format "#[fg=$thm_bg,bg=$thm_green] #I #(icons #{pane_current_command}) #[fg=$thm_fg,bg=$thm_bg] #{b:pane_current_path} "
+set -g clock-mode-colour "${thm_blue}"
+set -g mode-style "fg=${thm_pink} bg=${thm_black4} bold"
+set -g set-clipboard on

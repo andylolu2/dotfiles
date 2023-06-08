@@ -87,10 +87,10 @@ function link_file -d "links a file keeping a backup"
 end
 
 function link_dotfiles
-    # for src in $DOTFILES_ROOT/*/*.symlink
-    #     link_file $src $HOME/.(basename $src .symlink) backup
-    #     or abort 'failed to link config file'
-    # end
+    for src in $DOTFILES_ROOT/*/*.symlink
+        link_file $src $HOME/.(basename $src .symlink) backup
+        or abort 'failed to link config file'
+    end
 
     link_file $DOTFILES_ROOT/fish/plugins $__fish_config_dir/fish_plugins backup
     or abort plugins
