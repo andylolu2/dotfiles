@@ -2,6 +2,9 @@
 #
 # bootstrap installs things.
 
+echo "HELLO!"
+exit 0
+
 set DOTFILES_ROOT $HOME/.dotfiles
 
 function info
