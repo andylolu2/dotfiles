@@ -116,11 +116,9 @@ end
 
 curl -sL https://git.io/fisher | source
 
-fisher --help
+curl -sL git.io/fisher | source
 
-exit 0
-
-# curl -sL git.io/fisher | source && fisher install jorgebucaran/fisher
+fisher install jorgebucaran/fisher
 # and success fisher
 # or abort fisher
 
@@ -128,12 +126,12 @@ exit 0
 #     and success gitconfig or abort gitconfig
 
 link_dotfiles
-and success dotfiles
-or abort dotfiles
+# and success dotfiles
+# or abort dotfiles
 
 fisher update
-and success plugins
-or abort plugins
+# and success plugins
+# or abort plugins
 
 yes | fish_config theme save "Catppuccin Mocha"
 and success colorscheme
