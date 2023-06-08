@@ -129,10 +129,6 @@ fisher update
 and success plugins
 or abort plugins
 
-yes | fish_config theme save "Catppuccin Mocha"
-and success colorscheme
-or abort colorscheme
-
 mkdir -p $__fish_config_dir/completions/
 and success completions
 or abort completions
