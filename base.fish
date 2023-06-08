@@ -1,3 +1,4 @@
+#!/usr/bin/env fish
 set -Ux EDITOR nvim
 set -Ux VISUAL $EDITOR
 

@@ -132,8 +132,9 @@ yes | fish_config theme save "Catppuccin Mocha" \
 mkdir -p $__fish_config_dir/completions/ \
     and success completions or abort completions
 
-./base.fish
-for installer in
+$DOTFILES_ROOT/bash.fish
+
+for installer in */install.fish
     $installer and success $installer or abort $installer
 end
 
