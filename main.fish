@@ -2,9 +2,6 @@
 #
 # bootstrap installs things.
 
-echo "HELLO!"
-exit 0
-
 set DOTFILES_ROOT $HOME/.dotfiles
 
 function info
@@ -149,6 +146,8 @@ for installer in */install.fish
     and success $installer
     or abort $installer
 end
+
+exit 0
 
 if ! grep (command -v fish) /etc/shells
     command -v fish | tee -a /etc/shells
