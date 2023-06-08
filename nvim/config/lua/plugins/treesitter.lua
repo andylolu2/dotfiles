@@ -43,7 +43,7 @@ return {
           "c",
           "cpp",
           "css",
-          "cuda"
+          "cuda",
           "diff",
           "dockerfile",
           "fish",
@@ -61,7 +61,7 @@ return {
           "make",
           "markdown",
           "markdown_inline",
-          "ocaml"
+          "ocaml",
           "python",
           "regex",
           "rust",
