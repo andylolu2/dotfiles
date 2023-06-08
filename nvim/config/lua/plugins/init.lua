@@ -15,32 +15,6 @@ return {
     },
   },
   {
-    "rcarriga/nvim-notify",
-    priority = 999,
-    config = function()
-      require("user.notify")
-    end,
-  },
-  {
-    "akinsho/bufferline.nvim",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
-    opts = {
-      options = {
-        diagnostics = "nvim_lsp",
-        offsets = {
-          {
-            filetype = "NvimTree",
-            text = "File Explorer",
-            text_align = "center",
-            separator = true,
-          },
-        },
-      },
-    },
-  },
-  {
     "nvim-lualine/lualine.nvim",
     dependencies = {
       "nvim-tree/nvim-web-devicons",
@@ -67,11 +41,5 @@ return {
         },
       },
     },
-  },
-  {
-    "rmagatti/auto-session",
-    config = function()
-      require("user.autosession")
-    end,
   },
 }
