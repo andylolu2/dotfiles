@@ -122,18 +122,16 @@ or abort fisher
 #     and success gitconfig or abort gitconfig
 
 link_dotfiles
-# and success dotfiles
-# or abort dotfiles
+and success dotfiles
+or abort dotfiles
 
 fisher update
-# and success plugins
-# or abort plugins
-
-fish_config
+and success plugins
+or abort plugins
 
 yes | fish_config theme save "Catppuccin Mocha"
-# and success colorscheme
-# or abort colorscheme
+and success colorscheme
+or abort colorscheme
 
 mkdir -p $__fish_config_dir/completions/
 and success completions
