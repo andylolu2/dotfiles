@@ -53,7 +53,8 @@ return {
   {
     "numToStr/Comment.nvim",
     config = function()
-      require("user.comment")
+      require("Comment").setup({ mappings = false })
+      --   require("user.comment")
     end,
   },
 }
