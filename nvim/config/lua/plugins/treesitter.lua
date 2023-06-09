@@ -6,7 +6,6 @@ return {
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects",
       "nvim-treesitter/nvim-treesitter-context",
-      -- "nvim-treesitter/playground",
       "RRethy/nvim-treesitter-endwise",
       "windwp/nvim-autopairs",
     },
