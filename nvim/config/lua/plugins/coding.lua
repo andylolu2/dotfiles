@@ -35,7 +35,6 @@ return {
       -- snip x cmp
       "saadparwaiz1/cmp_luasnip",
       "L3MON4D3/LuaSnip",
-      "rafamadriz/friendly-snippets",
 
       -- hints
       "simrat39/inlay-hints.nvim",
