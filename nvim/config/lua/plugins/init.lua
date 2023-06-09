@@ -15,10 +15,16 @@ return {
     },
   },
   {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("nvim-tree").setup({})
+    end,
+  },
+  {
     "nvim-lualine/lualine.nvim",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
       options = {
         theme = "catppuccin",
@@ -31,7 +37,9 @@ return {
           {
             "filetype",
             icon_only = true,
-            icon = { align = "right" },
+            icon = {
+              align = "right",
+            },
           },
           {
             "filename",

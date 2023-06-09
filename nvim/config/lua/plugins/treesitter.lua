@@ -55,7 +55,6 @@ return {
           "html",
           "http",
           "javascript",
-          "jq",
           "json",
           "lua",
           "make",
@@ -70,7 +69,6 @@ return {
           "toml",
           "vim",
           "yaml",
-          "zig",
         },
         textobjects = {
           enable = true,

@@ -1,21 +1,8 @@
 local colors = require("catppuccin.palettes").get_palette()
 require("catppuccin").setup({
-  flavour = "mocha",
-  color_overrides = {
-    mocha = {
-      base = "#000000",
-    },
-  },
-  custom_highlights = {
-    Comment = { fg = colors.overlay1 },
-    LineNr = { fg = colors.overlay1 },
-  },
+  flavour = "macchiato"
   integrations = {
     cmp = true,
-    dap = {
-      enabled = true,
-      enable_ui = true,
-    },
     fidget = true,
     gitsigns = true,
     indent_blankline = {
@@ -29,7 +16,6 @@ require("catppuccin").setup({
     },
     neogit = true,
     neotree = true,
-    notify = true,
     nvimtree = true,
     symbols_outline = true,
     telescope = true,
