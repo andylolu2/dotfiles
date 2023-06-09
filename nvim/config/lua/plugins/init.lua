@@ -19,7 +19,7 @@ return {
     version = "*",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-      require("nvim-tree").setup({})
+      require("user.tree")
     end,
   },
   {
