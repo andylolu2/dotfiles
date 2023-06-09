@@ -1,6 +1,8 @@
 local comment = require("Comment")
 
-comment.setup()
+comment.setup({
+  mappings = false,
+})
 
 local opts = { noremap = true, silent = true, nowait = true }
 
