@@ -19,7 +19,7 @@ return {
     version = "*",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-      require("user.tree")
+      require("user.nvim-tree")
     end,
   },
   {
@@ -49,5 +49,11 @@ return {
         },
       },
     },
+  },
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup()
+    end,
   },
 }
