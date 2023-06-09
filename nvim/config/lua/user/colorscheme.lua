@@ -1,6 +1,6 @@
 local colors = require("catppuccin.palettes").get_palette()
 require("catppuccin").setup({
-  flavour = "macchiato"
+  flavour = "macchiato",
   integrations = {
     cmp = true,
     fidget = true,
