@@ -52,18 +52,22 @@ return {
   },
   {
     "numToStr/Comment.nvim",
-    init = function()
-      vim.keymap.set("x", "<C-_>", ":lua require('Comment.api').toggle()<CR>", opt)
-    end,
     config = function()
       require("Comment").setup({
+        toggler = {
+          line = "<C-_>",
+          block = "gbc",
+        },
+        opleader = {
+          line = "<C-_>",
+          block = "gb",
+        },
         mappings = {
-          basic = false,
+          basic = true,
           extra = false,
           extended = false,
         },
       })
-      --   require("user.comment")
     end,
   },
 }
