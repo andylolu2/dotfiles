@@ -60,11 +60,11 @@ return {
     event = "VeryLazy",
     config = true,
   },
-  {
-    "numToStr/Comment.nvim",
-    event = "VeryLazy",
-    config = true,
-  },
+  --   {
+  --     "numToStr/Comment.nvim",
+  --     event = "VeryLazy",
+  --     config = true,
+  --   },
   {
     "JellyApple102/easyread.nvim",
     ft = { "text", "markdown" },
