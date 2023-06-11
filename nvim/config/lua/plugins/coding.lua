@@ -60,11 +60,25 @@ return {
     event = "VeryLazy",
     config = true,
   },
-  --   {
-  --     "numToStr/Comment.nvim",
-  --     event = "VeryLazy",
-  --     config = true,
-  --   },
+  {
+    "numToStr/Comment.nvim",
+    event = "VeryLazy",
+    config = {
+      toggler = {
+        line = "<C-_>",
+        block = "gbc",
+      },
+      opleader = {
+        line = "<C-_>",
+        block = "gb",
+      },
+      mappings = {
+        basic = true,
+        extra = false,
+        extended = false,
+      },
+    },
+  },
   {
     "JellyApple102/easyread.nvim",
     ft = { "text", "markdown" },
