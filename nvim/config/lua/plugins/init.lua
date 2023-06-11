@@ -54,7 +54,6 @@ return {
     "numToStr/Comment.nvim",
     init = function()
       vim.keymap.set("x", "<C-_>", ":lua require('Comment.api').toggle()<CR>", opt)
-      require("Comment").setup()
     end,
     config = function()
       require("Comment").setup({
