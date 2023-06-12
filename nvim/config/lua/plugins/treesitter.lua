@@ -5,7 +5,6 @@ return {
     event = "BufEnter",
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects",
-      "nvim-treesitter/nvim-treesitter-context",
       "RRethy/nvim-treesitter-endwise",
       "windwp/nvim-autopairs",
     },
@@ -22,10 +21,6 @@ return {
         },
         autopairs = {
           enable = true,
-        },
-        context_commentstring = {
-          enable = true,
-          enable_autocmd = false,
         },
         incremental_selection = {
           enable = true,

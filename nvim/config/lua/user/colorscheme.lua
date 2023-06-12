@@ -20,7 +20,6 @@ require("catppuccin").setup({
     symbols_outline = true,
     telescope = true,
     treesitter = true,
-    treesitter_context = true,
     which_key = true,
   },
 })
