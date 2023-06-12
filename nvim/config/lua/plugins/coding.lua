@@ -64,6 +64,7 @@ return {
     "numToStr/Comment.nvim",
     event = "VeryLazy",
     config = {
+      ignore = "^$",
       toggler = {
         line = "<C-_>",
         block = "gbc",
