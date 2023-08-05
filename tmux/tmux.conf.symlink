@@ -6,6 +6,9 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 run -b '~/.tmux/plugins/tpm/tpm'
 
+# Increase repeat time
+set -g repeat-time 1000
+
 # Prefix
 set-option -g prefix C-a
 unbind-key C-a
@@ -19,15 +22,11 @@ set -g status-keys vi
 bind-key v split-window -h
 bind-key s split-window -v
 
-bind-key J resize-pane -D 5
-bind-key K resize-pane -U 5
-bind-key H resize-pane -L 5
-bind-key L resize-pane -R 5
-
-bind-key M-j resize-pane -D
-bind-key M-k resize-pane -U
-bind-key M-h resize-pane -L
-bind-key M-l resize-pane -R
+# Use 
+bind-key -r -T prefix C-h resize-pane -L 3
+bind-key -r -T prefix C-j resize-pane -D 3
+bind-key -r -T prefix C-k resize-pane -U 3
+bind-key -r -T prefix C-l resize-pane -R 3
 
 # Vim style pane selection
 bind h select-pane -L
@@ -41,15 +40,9 @@ bind -n M-j select-pane -D
 bind -n M-k select-pane -U
 bind -n M-l select-pane -R
 
-# Use Alt-arrow keys without prefix key to switch panes
-bind -n M-Left select-pane -L
-bind -n M-Right select-pane -R
-bind -n M-Up select-pane -U
-bind -n M-Down select-pane -D
-
-# Shift arrow to switch windows
-bind -n S-Left  previous-window
-bind -n S-Right next-window
+# Use Alt-shift-vim keys without prefix to switch windows
+bind -n M-H previous-window
+bind -n M-L next-window
 
 
 # Mouse mode
@@ -75,7 +68,7 @@ set-option -g automatic-rename on
 set-option -g automatic-rename-format '#{b:pane_current_path}'
 
 set -g default-terminal screen-256color
-set -g history-limit 10000
+set -g history-limit 20000
 
 setw -g monitor-activity on
 
