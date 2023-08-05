@@ -106,6 +106,6 @@ and exit 0
 
 chsh -s (which fish)
 and success set (fish --version) as the default shell
-or abort 'failed to set fish as default shell'
+or echo 'WARNING: Failed to set fish as default shell'
 
 success 'dotfiles installed/updated!'
