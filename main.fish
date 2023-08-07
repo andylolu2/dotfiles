@@ -87,7 +87,7 @@ $DOTFILES_ROOT/base.fish
 and success base.fish
 or abort base.fish
 
-for installer in */install.fish
+for installer in $DOTFILES_ROOT/*/install.fish
     $installer
     and success $installer
     or abort $installer
