@@ -17,7 +17,7 @@ function grep
     command grep --color=auto $argv
 end
 
-abbr -a clip "xclip sel clipboard"
+abbr -a clip "xclip -sel clipboard"
 abbr -a vim nvim
 abbr -a g git
 abbr -a mkdir "mkdir -p"
