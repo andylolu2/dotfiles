@@ -31,6 +31,7 @@ end
 
 function link_file -d "links a file keeping a backup"
     echo $argv | read -l old new backup
+    echo "linking $old to $new"
     if test -e $new
         set newf (readlink $new)
         if test "$newf" = "$old"
