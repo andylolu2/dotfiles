@@ -18,9 +18,12 @@ bind C-a send-prefix
 setw -g mode-keys vi
 set -g status-keys vi
 
-# Use prefix + v/s to split window
-bind v split-window -h
-bind s split-window -v
+# Use prefix + c for new window. Uses the cwd for the new window's.
+bind c new-window -c '#{pane_current_path}'
+
+# Use prefix + v/s to split window. Also uses the cwd for the new pane.
+bind v split-window -h -c '#{pane_current_path}'
+bind s split-window -v -c '#{pane_current_path}'
 
 # Use prefix + Ctrl-vi keys to resize pane
 bind -r -T prefix C-h resize-pane -L 3
@@ -44,6 +47,8 @@ set -g mouse on
 # Copy and paste to system clipboard
 bind -T copy-mode-vi v send-keys -X begin-selection
 bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xsel -i -b'
+# Don't exit copy mode on mouse release
+unbind -T copy-mode-vi MouseDragEnd1Pane
 
 # Auto restore tmux
 set -g @continuum-restore 'on'
