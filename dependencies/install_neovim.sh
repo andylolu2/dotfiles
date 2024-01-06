@@ -16,4 +16,5 @@ cd $BUILD_TEMP_DIR
 wget https://github.com/neovim/neovim/releases/download/v$VERSION/nvim-linux64.tar.gz
 tar xf nvim-linux64.tar.gz
 
-cp nvim-linux64/bin/nvim $LOCAL_DIR/bin
+cp -r nvim-linux64/* $LOCAL_DIR
+
