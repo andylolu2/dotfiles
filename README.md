@@ -64,4 +64,3 @@ ADD https://api.github.com/repos/andylolu2/dotfiles/git/refs/heads/main /tmp/ver
 RUN git clone https://github.com/andylolu2/dotfiles $HOME/.dotfiles && \
     $HOME/.dotfiles/main.fish
 ```
-
