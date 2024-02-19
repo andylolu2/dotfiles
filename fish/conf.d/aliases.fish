@@ -19,7 +19,8 @@ end
 
 abbr -a clip "xclip -sel clipboard"
 abbr -a vim nvim
-abbr -a mkdir "mkdir -p"
+abbr -a mkdir "mkdir -pv"
+abbr -a safe_rm "rm -iv"
 
 # find/read files
 abbr -a h head
