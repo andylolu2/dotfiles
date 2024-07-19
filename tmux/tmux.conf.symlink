@@ -74,8 +74,10 @@ set -g history-limit 20000
 
 setw -g monitor-activity on
 
-# No delay for escape key press
-set -sg escape-time 0
+# Reduce delay switching vim modes on escape key press
+# Settings it to 0 breaks vscode integrated terminal for some
+# reason
+set -sg escape-time 20
 
 # Reload tmux config with prefix + r
 bind r source-file ~/.tmux.conf
