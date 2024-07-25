@@ -18,6 +18,10 @@ bind C-a send-prefix
 setw -g mode-keys vi
 set -g status-keys vi
 
+# Reduce scroll speed (3 lines per scroll)
+bind-key -T copy-mode-vi WheelUpPane send -N3 -X scroll-up
+bind-key -T copy-mode-vi WheelDownPane send -N3 -X scroll-down
+
 # Use prefix + c for new window. Uses the cwd for the new window's.
 bind c new-window -c '#{pane_current_path}'
 
