@@ -40,6 +40,7 @@ abbr -a gc git commit
 abbr -a gca git commit --amend --no-edit
 abbr -a gp git push
 abbr -a gpf git push -f
+abbr -a gcl git clone --recurse-submodules
 
 # tmux
 abbr -a ta "tmux attach -d -t"
