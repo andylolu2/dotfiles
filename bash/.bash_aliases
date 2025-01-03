@@ -37,8 +37,11 @@ type git >/dev/null 2>&1 && \
     alias gc='git commit' && \
     alias gca='git commit --amend --no-edit' && \
     alias gp='git push' && \
+    alias gpl='git pull' && \
     alias gpf='git push -f' && \
     alias gcl='git clone --recurse-submodules'
+    alias gd='git diff' && \
+    alias gds='git diff --staged'
 
 # tmux
 type tmux >/dev/null 2>&1 && \
