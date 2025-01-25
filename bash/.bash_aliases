@@ -41,7 +41,9 @@ type git >/dev/null 2>&1 && \
     alias gpf='git push -f' && \
     alias gcl='git clone --recurse-submodules'
     alias gd='git diff' && \
-    alias gds='git diff --staged'
+    alias gds='git diff --staged' && \
+    alias gco='git checkout' && \
+    alias gcb='git checkout -b'
 
 # tmux
 type tmux >/dev/null 2>&1 && \
@@ -50,7 +52,8 @@ type tmux >/dev/null 2>&1 && \
     alias tn='tmux new -A -D -s' && \
     alias tl='tmux ls' && \
     alias tkill='tmux kill-server' && \
-    alias tdel='tmux kill-session -t'
+    alias tdel='tmux kill-session -t' && \
+    alias fixssh='eval $(tmux showenv -s SSH_AUTH_SOCK)'
 
 # slurm
 type squeue >/dev/null 2>&1 && \
