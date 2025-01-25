@@ -61,6 +61,7 @@ function link_dotfiles
     # link_file $DOTFILES_ROOT/ssh/rc $HOME/.ssh/rc backup
     # or abort ssh-rc
     link_file $DOTFILES_ROOT/nvim/config $HOME/.config/nvim backup
+    link_file $DOTFILES_ROOT/ghostty/config $HOME/.config/ghostty backup
     or abort nvim
 end
 

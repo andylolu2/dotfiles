@@ -1,0 +1,4 @@
+theme = "iTerm2 Default"
+background-opacity = 0.88
+background-blur-radius = 20
+macos-option-as-alt = true
