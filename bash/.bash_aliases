@@ -58,4 +58,20 @@ type tmux >/dev/null 2>&1 && \
 # slurm
 type squeue >/dev/null 2>&1 && \
     alias sq='squeue' && \
-    alias sqm='squeue --me'
+    alias sqm='squeue --format="%.15i %.9P %.45j %.8u %.8T %.10M %.9l %.6D %R %q" --me'
+
+function node_attach() {
+  # Attach to first allocated node
+  ssh $(squeue --me --json | jq -r .jobs[0].nodes)
+}
+
+function container_attach() {
+  # Attach to first container running on this machine
+  enroot exec -- $(enroot list -f | tail -n 1 |  awk '{print $2}') /bin/bash
+}
+
+function remote_container_attach() {
+  # Attach to first container running on first allocated node
+  ssh -t $(squeue --me --json | jq -r .jobs[0].nodes) 'enroot exec -- $(enroot list -f | tail -n 1 |  awk '\''{print $2}'\'') /bin/bash'
+}
+
