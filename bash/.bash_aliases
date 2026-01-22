@@ -43,7 +43,8 @@ type git >/dev/null 2>&1 && \
     alias gd='git diff' && \
     alias gds='git diff --staged' && \
     alias gco='git checkout' && \
-    alias gcb='git checkout -b'
+    alias gcb='git checkout -b' && \
+    alias gwt='git worktree'
 
 # tmux
 type tmux >/dev/null 2>&1 && \
