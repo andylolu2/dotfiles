@@ -44,7 +44,8 @@ type git >/dev/null 2>&1 && \
     alias gds='git diff --staged' && \
     alias gco='git checkout' && \
     alias gcb='git checkout -b' && \
-    alias gwt='git worktree'
+    alias gwt='git worktree' && \
+    alias gty="git maintenance run --task commit-graph --task loose-objects --task incremental-repack --task pack-refs --task gc"
 
 # tmux
 type tmux >/dev/null 2>&1 && \
