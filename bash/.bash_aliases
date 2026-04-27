@@ -45,7 +45,8 @@ type git >/dev/null 2>&1 && \
     alias gco='git checkout' && \
     alias gcb='git checkout -b' && \
     alias gwt='git worktree' && \
-    alias gty="git maintenance run --task commit-graph --task loose-objects --task incremental-repack --task pack-refs --task gc"
+    alias gty="git maintenance run --task commit-graph --task loose-objects --task incremental-repack --task pack-refs --task gc" && \
+    alias gfo="git fetch origin"
 
 # tmux
 type tmux >/dev/null 2>&1 && \
